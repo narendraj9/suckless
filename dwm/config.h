@@ -61,6 +61,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *emacscmd[] = { "emacs", NULL };
+static const char *toggletouchpad[] = { "tflip", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -68,6 +69,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask,             XK_semicolon,  spawn,          {.v = slockcmd } },
     { MODKEY,                       XK_e,          spawn,          {.v = emacscmd } },
+    { MODKEY,                       XK_f,          spawn,          {.v = toggletouchpad } },
 	{ MODKEY,                       XK_b,          togglebar,      {0} },
 	{ MODKEY,                       XK_j,          focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,     {.i = -1 } },
